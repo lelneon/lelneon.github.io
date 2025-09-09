@@ -8,7 +8,7 @@ function showSection(id) {
   document.getElementById(id).classList.add("active");
 }
 
-// Show "about" by default
+// Show "start" by default
 document.addEventListener("DOMContentLoaded", () => {
   showSection("start");
 });
