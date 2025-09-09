@@ -4,20 +4,29 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>z-sk</title>
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="style/styles.css">
     </head>
     <body>
+        <canvas id = "bg"></canvas>
+
         <header>
-                <h1>z-sk</h1>
+                <h1>z-sk's corner</h1>
                 <p>yes i exist</p>
                 <nav>
+                    <a href = "#start" onclick = "showSection('start')">Start</a>
                     <a href = "#about" onclick = "showSection('about')">About</a>
                     <a href = "#projects" onclick = "showSection('projects')">Projects</a>
                     <a href = "#socials" onclick = "showSection('socials')">Socials</a>
                 </nav>
         </header>
 
-        <script src = "script.js"></script>
+        <script src = "scripts/showSection.js"></script>
+        <script src = "scripts/particles.js"></script>
+        <script src = "scripts/typing.js"></script>
+
+        <section id = "start" class = "container">
+            <h2 id = "typing"></h2>
+        </section>
 
         <section id = "about" class = "container">
             <h2>About Me</h2>
@@ -35,15 +44,24 @@
             <h3>netalk</h3>
             <p>My chat app made in Go for server, React, and C# for frontends</p>
             <a href = "https://github.com/z-sk1/netalk-chat">See More Here</a>
-            <h3>shrtnd</h3>
-            <p>My own URL shortener made in Go and a HTML/CSS/JS, and C#, and React frontend</p>
-            <a href = "https://github.com/z-sk1/shrtnd">See More Here</a>
             <h3>discord-bot</h3>
             <p>My own Discord Bot made in Go using the discordgo library</p>
             <a href = "https://github.com/z-sk1/discord-bot">See More Here</a>
             <h3>ways of the pig</h3>
             <p>My online and local coop platformer made in the LOVE2D Lua framework</p>
             <a href = "https://github.com/z-sk1/ways-of-the-pig">See More Here</a>
+            <h3>shrtnd</h3>
+            <p>My own URL shortener made in Go and a HTML/CSS/JS, and C#, and React frontend</p>
+            <a href = "https://github.com/z-sk1/shrtnd">See More Here</a>
+            <a href = https://z-sk1.github.io/shrtnd">Visit Here</a>
+            <h3>weathery</h3>
+            <p>My weather finding app made in Go and a HTML/CSS/JS, C#, and React frontend</p>
+            <a href = "https://github.com/z-sk1/weathery">See More Here</a>
+            <a href = "https://z-sk1.github.io/weathery">Visit Here</a>
+            <h3>click-clock</h3>
+            <p>My time finding app made in Go and a HTML/CSS/JS, C#, and React frontend</p>
+            <a href = "https://github.com/z-sk1/click-clock">See More Here</a>
+            <a href = "https://z-sk1.github.io/click-clock">Visit Here</a>
             <h2>See All Projects and Repos:</h2>
             <a href = "https://github.com/z-sk1?tab=repositories">See All Repos</a>
         </section>

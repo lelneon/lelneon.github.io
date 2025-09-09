@@ -10,5 +10,5 @@ function showSection(id) {
 
 // Show "about" by default
 document.addEventListener("DOMContentLoaded", () => {
-  showSection("about");
+  showSection("start");
 });
