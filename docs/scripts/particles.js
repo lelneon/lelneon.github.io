@@ -41,7 +41,7 @@ window.addEventListener("resize", () => {
 
 // Particles
 let particles = [];
-const MAX_PARTICLES = 200;
+const MAX_PARTICLES = 350;
 
 class Particle {
     constructor(x = null, y = null) {

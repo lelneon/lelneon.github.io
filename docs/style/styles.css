@@ -22,7 +22,7 @@ body {
   z-index: 1;
 }
 
-#typing {
+.typing {
   display: inline-block;
   white-space: nowrap;
   overflow: hidden;
