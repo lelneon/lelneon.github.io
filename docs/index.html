@@ -17,12 +17,9 @@
                     <a href = "#about" onclick = "showSection('about')">About</a>
                     <a href = "#projects" onclick = "showSection('projects')">Projects</a>
                     <a href = "#socials" onclick = "showSection('socials')">Socials</a>
+                    <a href = "#settings" onclick = "showSection('settings')">Settings</a>
                 </nav>
         </header>
-
-        <script src = "scripts/showSection.js"></script>
-        <script src = "scripts/particles.js"></script>
-        <script src = "scripts/typing.js"></script>
 
         <section id = "start" class = "container">
             <h2 id = "spec" class = "typing"></h2>
@@ -77,5 +74,26 @@
             <h3>GitHub:</h3>
             <a href = "https://github.com/z-sk1">z-sk</a>
         </section>
+
+        <section id = "settings">
+            <h2 class = "typing">Settings</h2>
+            <h3>Particles!</h3>
+            <div class = "slider-setting">
+                <label for = "sizeSlider">Size:</label>
+                <input type = "range" id = "sizeSlider" min = "0" max = "300" value = "100">
+                <span id = "sizeSliderVal">100</span>
+            </div>
+
+            <div class = "slider-setting">
+                <label for = "speedSlider">Speed:</label>
+                <input type = "range" id = "speedSlider" min = "0" max = "300" value = "100">
+                <span id = "speedSliderVal">100</span>
+            </div>
+        </section>
+
+        <script src = "scripts/showSection.js"></script>
+        <script src = "scripts/particles.js"></script>
+        <script src = "scripts/typing.js"></script>
+        <script src = "scripts/sliders.js"></script>
     </body>
 </html>

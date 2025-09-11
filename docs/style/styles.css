@@ -12,6 +12,11 @@ body {
   background: black;
 }
 
+input[type="range"] {
+  width: 200px;
+  accent-color: #40c4ff; /* modern browsers */
+}
+
 #bg {
   position: fixed;
   top: 0;
@@ -21,6 +26,18 @@ body {
   pointer-events: none;
   z-index: 1;
 }
+
+.slider-setting {
+  margin: 10px 0; /* space between sliders */
+}
+
+.slider-setting label,
+.slider-setting input,
+.slider-setting span {
+  display: inline-block; /* keep them on the same line */
+  vertical-align: middle;
+}
+
 
 .typing {
   display: inline-block;
