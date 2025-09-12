@@ -56,3 +56,28 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".dropdown.active").forEach(d => d.classList.remove("active"));
   });
 });
+
+// konami code hehe
+
+document.addEventListener("DOMContentLoaded", () => {
+  const konamiCode = [
+    "ArrowUp", "ArrowUp",
+    "ArrowDown", "ArrowDown",
+    "ArrowLeft", "ArrowRight",
+    "ArrowLeft", "ArrowRight"
+  ];
+  let current = 0;
+
+  const secretSound = new Audio("sounds/scream.mp3");
+  document.addEventListener("keydown", (e) => {
+    if (e.key === konamiCode[current]) {
+      current++;
+      if (current === konamiCode.length) {
+        current = 0;
+        secretSound.play();
+      }
+    } else {
+
+    }
+  });
+});
