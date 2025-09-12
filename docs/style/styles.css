@@ -43,6 +43,7 @@ input[type="range"] {
   display: inline-block;
   white-space: nowrap;
   overflow: hidden;
+  min-height: 2em;
   color: white; /* make sure text is visible */
   font-size: 2rem;
 }
@@ -102,6 +103,7 @@ section {
 section h2, section h3, section p, section a {
   margin-left: auto;
   margin-right: auto;
+  min-height: 2em;
 }
 
 
