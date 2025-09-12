@@ -12,3 +12,7 @@ function showSection(id) {
 document.addEventListener("DOMContentLoaded", () => {
   showSection("start");
 });
+
+function changeColor(color) {
+  window.finalSettings.color = color
+}

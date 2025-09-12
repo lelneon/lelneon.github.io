@@ -29,6 +29,9 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         get maxParticles() {
         return parseInt(maxParticlesSlider?.value ?? "350", 10);
-        }
+        },
+        get color() {
+        return "";
+        },
     };
 });

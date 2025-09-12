@@ -8,6 +8,20 @@ document.addEventListener("DOMContentLoaded", () => {
         radius: 100,
     };
 
+    window.colors = {
+        white: "#fff",
+        blue: "#007AAF",
+        red: "#FF3B30",
+        yellow: "#FFCC00",
+        green: "#34C759",
+        purple: "#AF52DE",
+        pink: "#FF2D55",
+        cyan: "#5AC8FA",
+        orange: "#FF9500",
+        gray: "#8E8E93",
+        indigo: "#5856D6",
+    };
+
     // Mouse move tracking
     window.addEventListener("mousemove", function(event) {
 
