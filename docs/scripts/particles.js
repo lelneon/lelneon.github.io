@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
         gray: "#8E8E93",
         indigo: "#5856D6",
     };
+    window.colorIsRainbow = false;
 
     // Mouse move tracking
     window.addEventListener("mousemove", function(event) {
@@ -64,11 +65,14 @@ document.addEventListener("DOMContentLoaded", () => {
             this.baseSize = Math.random() * 3 + 1;
             this.speedX = Math.random() - 0.5;
             this.speedY = Math.random() - 0.5
+
+            const colorArray = Object.values(window.colors);
+            this.color = colorArray[Math.floor(Math.random() * colorArray.length)];
         }
 
         update() {
-            this.x += this.speedX * (finalSettings.speed / 100)
-            this.y += this.speedY * (finalSettings.speed / 100)
+            this.x += this.speedX * (finalSettings.speed / 100);
+            this.y += this.speedY * (finalSettings.speed / 100);
 
             if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
             if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
@@ -87,7 +91,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         draw() {
             const size = this.baseSize * (finalSettings.size / 100);
-            ctx.fillStyle = "white";
+            if (window.colorIsRainbow) {
+                ctx.fillStyle = this.color;
+            } else {
+                ctx.fillStyle = window.finalSettings.color;
+            }
             ctx.beginPath();
             ctx.arc(this.x, this.y, size, 0, Math.PI * 2);
             ctx.fill();

@@ -32,18 +32,20 @@ input[type="range"] {
     }
 
     .dropbtn {
-      background: none;
-      border: none;
-      font-size: 18px;
-      font-weight: 500;
-      color: #333;
-      cursor: pointer;
-      padding: 10px 16px;
-      transition: color 0.2s ease;
+      display: inline-block;       /* treat links like blocks */
+      text-align: center;          /* center the text inside link */
+      margin: 0.5rem auto;         /* center horizontally */
+      padding: 0.5rem 1rem;        /* make it look like a button */
+      background: #1a1a1a;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s ease;
     }
 
     .dropbtn:hover {
-      color: #0071e3; /* Apple blue */
+      background: #ff9800;
+      scale: 1.04;
     }
 
     .dropdown-content {
@@ -67,12 +69,14 @@ input[type="range"] {
       display: block;
       padding: 12px 16px;
       text-decoration: none;
+      background-color: #fff;
       color: #333;
       transition: background 0.2s;
     }
 
     .dropdown-content a:hover {
-      background: #f5f5f7;
+      background: #ff9800;
+      scale: 1.04;
     }
 
     /* Show the menu when active */
