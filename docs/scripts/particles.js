@@ -107,6 +107,12 @@ document.addEventListener("DOMContentLoaded", () => {
         particles.push(new Particle(x, y));
     }
 
+    window.spawnMaxParticles = function () {
+        for (let i = 1; i < window.finalSettings.maxParticles; i++) {
+            addParticle(Math.random() * canvas.width, Math.random() * canvas.height)
+        }
+    }
+
     // Initialize
     function init() {
         particles = [];
