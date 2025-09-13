@@ -68,6 +68,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // konami code hehe
 
+const go = () => {
+  const secretSound = new Audio("sounds/scream.mp3");
+
+  // Try to play immediately
+  secretSound.play().catch(err => {
+    console.log("Autoplay blocked:", err);
+  });
+
+  // Show confirm after a tiny delay to ensure sound starts
+  setTimeout(() => {
+    const confirmed = confirm("The Radiance calls for you. Venture to Hallownest?");
+    if (confirmed) {
+      showSection("hehe");
+    }
+  }, 50); // 50ms delay
+};
+
 document.addEventListener("DOMContentLoaded", () => {
   const konamiCode = [
     "ArrowUp", "ArrowUp",
@@ -83,12 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
       current++;
       if (current === konamiCode.length) {
         current = 0;
-        secretSound.play();
-        
-        const go = confirm("The Radiance calls for you. Venture to Hallownest?");
-        if (go) {
-          window.open("steam://rungameid/367520")
-        }
+        go();
       }
     } else {
       current = 0;
