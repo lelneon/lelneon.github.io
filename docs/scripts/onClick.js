@@ -35,6 +35,15 @@ document.addEventListener("DOMContentLoaded", () => {
       drop.classList.toggle("active");
     });
 
+    btn.addEventListener("mouseenter", () => {
+      drop.classList.add("active");
+    });
+
+    // close when mouse leaves the whole dropdown
+    drop.addEventListener("mouseleave", () => {
+      drop.classList.remove("active");
+    });
+
     // handle clicks inside menu links (prevent page jump and close dropdown)
     menu.querySelectorAll("a").forEach(link => {
       link.addEventListener("click", (e) => {
