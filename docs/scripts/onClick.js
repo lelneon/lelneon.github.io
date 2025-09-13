@@ -69,10 +69,10 @@ document.addEventListener("DOMContentLoaded", () => {
 // konami code hehe
 
 const go = () => {
-  const secretSound = new Audio("sounds/scream.mp3");
+  const sound = new Audio("sounds/radiance/scream.mp3");
 
   // Try to play immediately
-  secretSound.play().catch(err => {
+  sound.play().catch(err => {
     console.log("Autoplay blocked:", err);
   });
 
@@ -94,13 +94,96 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
   let current = 0;
 
-  const secretSound = new Audio("sounds/scream.mp3");
   document.addEventListener("keydown", (e) => {
     if (e.key === konamiCode[current]) {
       current++;
       if (current === konamiCode.length) {
         current = 0;
         go();
+      }
+    } else {
+      current = 0;
+    }
+  });
+});
+
+function playPortal() {
+  const sounds = {
+    glados1: new Audio('sounds/glados/glados1.wav'),
+    glados2: new Audio('sounds/glados/glados2.wav'),
+    glados3: new Audio('sounds/glados/glados3.wav'),
+    glados4: new Audio('sounds/glados/glados4.wav'),
+    glados5: new Audio('sounds/glados/glados5.wav'),
+    glados6: new Audio('sounds/glados/glados6.wav'),
+    glados7: new Audio('sounds/glados/glados7.wav'),
+    glados8: new Audio('sounds/glados/glados8.wav'),
+    glados9: new Audio('sounds/glados/glados9.wav'),
+    glados10: new Audio('sounds/glados/glados10.wav'),
+    glados11: new Audio('sounds/glados/glados11.wav'),
+    glados12: new Audio('sounds/glados/glados12.wav'),
+    glados13: new Audio('sounds/glados/glados13.wav'),
+    glados14: new Audio('sounds/glados/glados14.wav'),
+    glados15: new Audio('sounds/glados/glados15.wav'),
+    glados16: new Audio('sounds/glados/glados16.wav'),
+    glados17: new Audio('sounds/glados/glados17.wav'),
+    glados18: new Audio('sounds/glados/glados18.wav'),
+    glados19: new Audio('sounds/glados/glados19.wav'),
+    glados20: new Audio('sounds/glados/glados20.wav'),
+    glados21: new Audio('sounds/glados/glados21.wav'),
+    wheatley1: new Audio('sounds/wheatley/wheatley1.wav'),
+    wheatley2: new Audio('sounds/wheatley/wheatley2.wav'),
+    wheatley3: new Audio('sounds/wheatley/wheatley3.wav'),
+    wheatley4: new Audio('sounds/wheatley/wheatley4.wav'),
+    wheatley5: new Audio('sounds/wheatley/wheatley5.wav'),
+    wheatley6: new Audio('sounds/wheatley/wheatley6.wav'),
+    wheatley7: new Audio('sounds/wheatley/wheatley7.wav'),
+    wheatley8: new Audio('sounds/wheatley/wheatley8.wav'),
+    wheatley9: new Audio('sounds/wheatley/wheatley9.wav'),
+    wheatley10: new Audio('sounds/wheatley/wheatley10.wav'),
+    wheatley11: new Audio('sounds/wheatley/wheatley11.wav'),
+    wheatley12: new Audio('sounds/wheatley/wheatley12.wav'),
+    wheatley13: new Audio('sounds/wheatley/wheatley13.wav'),
+    wheatley14: new Audio('sounds/wheatley/wheatley14.wav'),
+    wheatley15: new Audio('sounds/wheatley/wheatley15.wav'),
+    wheatley16: new Audio('sounds/wheatley/wheatley16.wav'),
+    wheatley17: new Audio('sounds/wheatley/wheatley17.wav'),
+    wheatley18: new Audio('sounds/wheatley/wheatley18.wav'),
+    wheatley19: new Audio('sounds/wheatley/wheatley19.wav'),
+    wheatley20: new Audio('sounds/wheatley/wheatley20.wav'),
+    wheatley21: new Audio('sounds/wheatley/wheatley21.wav'),
+    wheatley22: new Audio('sounds/wheatley/wheatley22.wav'),
+    wheatley23: new Audio('sounds/wheatley/wheatley23.wav'),
+    wheatley24: new Audio('sounds/wheatley/wheatley24.wav'),
+    wheatley25: new Audio('sounds/wheatley/wheatley25.wav'),
+    wheatley26: new Audio('sounds/wheatley/wheatley26.wav'),
+    wheatley27: new Audio('sounds/wheatley/wheatley27.wav'),
+    wheatley28: new Audio('sounds/wheatley/wheatley28.wav'),
+    wheatley29: new Audio('sounds/wheatley/wheatley29.wav'),
+    wheatley30: new Audio('sounds/wheatley/wheatley30.wav'),
+    wheatley31: new Audio('sounds/wheatley/wheatley31.wav'),
+    wheatley32: new Audio('sounds/wheatley/wheatley32.wav'),
+    wheatley33: new Audio('sounds/wheatley/wheatley33.wav'),
+    wheatley34: new Audio('sounds/wheatley/wheatley34.wav'),
+  };
+
+  soundsArray = Object.values(sounds);
+  let randSound = soundsArray[Math.floor(Math.random() * soundsArray.length)];
+
+  randSound.play();
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const code = [
+    "p", "o", "r", "t", "a", "l",
+  ];
+  let current = 0;
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === code[current]) {
+      current++;
+      if (current === code.length) {
+        current = 0;
+        playPortal();
       }
     } else {
       current = 0;
