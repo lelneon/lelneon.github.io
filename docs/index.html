@@ -12,12 +12,17 @@
         <header>
                 <h1 class = "typing colored">z-sk's corner</h1>
                 <p>yes i exist</p>
-                <nav>
-                    <a href = "#start" onclick = "showSection('start')">Start</a>
-                    <a href = "#projects" onclick = "showSection('projects')">Projects</a>
-                    <a href = "#socials" onclick = "showSection('socials')">Socials</a>
-                    <a href = "#settings" onclick = "showSection('settings')">Settings</a>
-                </nav>
+                <div class = "dropdown">
+                    <button class = "dropbtn">
+                        Menu <span class = "arrow">▼</span>
+                    </button>
+                    <div class = "dropdown-content">
+                        <a href = "#start" onclick = "showSection('start')">Start</a>
+                        <a href = "#projects" onclick = "showSection('projects')">Projects</a>
+                        <a href = "#socials" onclick = "showSection('socials')">Socials</a>
+                        <a href = "#settings" onclick = "showSection('settings')">Settings</a>
+                    </div>
+                </div>
         </header>
 
         <section id = "start" class = "container">
@@ -94,7 +99,9 @@
             </div>
 
             <div class = "dropdown">
-                <button class = "dropbtn">Change Color</button>
+                <button class = "dropbtn">
+                    Colors <span class = "arrow">▼</span>
+                </button>
                 <div class = "dropdown-content">
                     <a href = "#" onclick = "changeColor('white')">White</a>
                     <a href = "#" onclick = "changeColor('blue')">Blue</a>

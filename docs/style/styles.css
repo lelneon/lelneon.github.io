@@ -48,6 +48,16 @@ input[type="range"] {
       scale: 1.04;
     }
 
+    .dropbtn .arrow {
+      display: inline-block;
+      margin-left: 5px;
+      transition: transform 0.3s ease;
+    }
+
+    .dropdown.active .arrow {
+      transform: rotate(180deg);
+    }
+
     .dropdown-content {
       position: absolute;
       top: 100%;
