@@ -84,15 +84,14 @@ document.addEventListener("DOMContentLoaded", () => {
       if (current === konamiCode.length) {
         current = 0;
         secretSound.play();
-        const link = document.createElement("a");
-        link.classList.add("secret")
-        link.href = "steam://rungameid/367520"; // Hollow Knight
-        link.textContent = "follow";
-        link.style.display = "block";
-        document.body.appendChild(link);
+        
+        const go = confirm("The Radiance calls for you. Venture to Hallownest?");
+        if (go) {
+          window.open("steam://rungameid/367520")
+        }
       }
     } else {
-
+      current = 0;
     }
   });
 });
