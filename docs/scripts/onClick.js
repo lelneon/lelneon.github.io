@@ -84,6 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (current === konamiCode.length) {
         current = 0;
         secretSound.play();
+        window.location.href = "steam://rungameid/367520";
       }
     } else {
 
