@@ -108,8 +108,38 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     window.spawnMaxParticles = function () {
-        for (let i = 1; i < window.finalSettings.maxParticles; i++) {
+        for (let i = 0; i < window.finalSettings.maxParticles; i++) {
             addParticle(Math.random() * canvas.width, Math.random() * canvas.height)
+        }
+    }
+
+    window.resetParticles = function () {
+        particles = [];
+        
+        window.finalSettings.size = 100;
+        window.finalSettings.speed = 100;
+        window.finalSettings.maxParticles = 350;
+
+        const sizeSlider = document.getElementById("sizeSlider");
+        const sizeSliderVal = document.getElementById("sizeSliderVal");
+
+        sizeSlider.value = 100;
+        sizeSliderVal.textContent = "100%";
+
+        const speedSlider = document.getElementById("speedSlider");
+        const speedSliderVal = document.getElementById("speedSliderVal");
+
+        speedSlider.value = 100;
+        speedSliderVal.textContent = "100%";
+
+        const maxParticlesSlider = document.getElementById("maxParticlesSlider");
+        const maxParticlesSliderVal = document.getElementById("maxParticlesSliderVal");
+
+        maxParticlesSlider.value = 350;
+        maxParticlesSliderVal.textContent = "350";
+
+        for (let i = 0; i < 100; i++) {
+            addParticle(Math.random() * canvas.width, Math.random() * canvas.height);
         }
     }
 
