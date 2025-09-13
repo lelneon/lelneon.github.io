@@ -26,6 +26,25 @@ input[type="range"] {
   pointer-events: none;
   z-index: 1;
 }
+
+.secret {
+    display: none;        /* hidden by default */
+    background-color: gold;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+/* Optional: show it when a class like 'active' is added */
+.secret.active {
+    display: block;
+}
     .dropdown {
       position: relative;
       display: inline-block;

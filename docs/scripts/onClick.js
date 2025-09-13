@@ -84,7 +84,12 @@ document.addEventListener("DOMContentLoaded", () => {
       if (current === konamiCode.length) {
         current = 0;
         secretSound.play();
-        window.location.href = "steam://rungameid/367520";
+        const link = document.createElement("a");
+        link.classList.add("secret")
+        link.href = "steam://rungameid/367520"; // Hollow Knight
+        link.textContent = "follow";
+        link.style.display = "block";
+        document.body.appendChild(link);
       }
     } else {
 
